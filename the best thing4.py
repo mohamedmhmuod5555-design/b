@@ -36,9 +36,7 @@ if sign=='/':
 st.title("Welcome to Mohamed's game ")
 st.write(num1,sign,num2)
 number=st.number_input("ادخل النتيجه ")
-with st.form(...):
- submit_button = st.form_submit_button(label="تأكيد التخمين والانتقال 🎯")
-if submit_button:
+if st.button("تأكيد التخمين ")
   st.session_state.count += 1
   if number == sc:
     st.session_state.feed="correct"
