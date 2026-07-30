@@ -1,4 +1,5 @@
 import random
+import time
 import streamlit as st
 if 'ran' not in st.session_state or st.session_state.ran < 1:
   st.session_state.ran=20
@@ -55,6 +56,7 @@ if st.session_state.feed=="false":
    st.session_state.num1=random.randint(1,st.session_state.ran)
    st.session_state.num2=random.randint(1,st.session_state.ran)
    st.session_state.sign=random.choice(['+','-','*','/'])
+   st.spinner()
    st.rerun()
 
 if st.session_state.num > 0 and st.session_state.num % 10 == 0:
