@@ -45,16 +45,16 @@ if st.button("تأكيد التخمين "):
 if st.session_state.feed=="correct":
   st.success("اجابتك صحيحه انك اسكوره ")
   st.session_state.num += 1
-  num1 = st.session_state.num1
-  num2 = st.session_state.num2
-  sign = st.session_state.sign
+  st.session_state.num1=random.randint(1,st.session_state.ran)
+  st.session_state.num2=random.randint(1,st.session_state.ran)
+  st.session_state.sign=random.choice(['+','-','*','/'])
  
 if st.session_state.feed=="false":
    st.error(f"اجابتك خاطئة! الإجابة الصحيحة كانت : {sc}")
    st.session_state.num =0
-   num1 = st.session_state.num1
-   num2 = st.session_state.num2
-   sign = st.session_state.sign
+   st.session_state.num1=random.randint(1,st.session_state.ran)
+   st.session_state.num2=random.randint(1,st.session_state.ran)
+   st.session_state.sign=random.choice(['+','-','*','/'])
    
 
 if st.session_state.num > 0 and st.session_state.num % 10 == 0:
